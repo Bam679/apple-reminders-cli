@@ -157,7 +157,7 @@ Everything an agent reads through this CLI is sent to the model provider. Reduce
 - **Add hooks that scan before data leaves.** A Claude Code `PostToolUse` hook can pipe tool output through a detector and block or redact it:
   - [gitleaks/gitleaks](https://github.com/gitleaks/gitleaks): secrets (API keys, tokens) in text and repos
   - [trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog): verified secret detection
-  - [microsoft/presidio](https://github.com/microsoft/presidio): PII detection and anonymization (names, emails, IBANs, phone numbers)
+  - [data-privacy-stack/presidio](https://github.com/data-privacy-stack/presidio) (formerly microsoft/presidio): PII detection and anonymization (names, emails, IBANs, phone numbers)
 - **Never paste outputs into issues.** Bug reports should contain redacted or synthetic data only.
 - **Review the policy regularly.** `apple-reminders policy` shows exactly what the agent may touch.
 
