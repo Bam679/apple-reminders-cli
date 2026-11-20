@@ -1,4 +1,6 @@
 # Install once: lefthook install
+output:
+  - failure
 pre-commit:
   parallel: true
   commands:

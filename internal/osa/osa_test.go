@@ -87,6 +87,7 @@ func TestMapStderr(t *testing.T) {
 		"execution error: Not authorized to send Apple events to Reminders. (-1743)": agentcli.ExitPermission,
 		"AppleEvent timed out. (-1712)":                                              agentcli.ExitUnavailable,
 		"Application isn't running. (-600)":                                          agentcli.ExitUnavailable,
+		"Can't get object. (-1728)":                                                  agentcli.ExitNotFound,
 		"":                                                                           agentcli.ExitError,
 		"some other failure":                                                         agentcli.ExitError,
 	}

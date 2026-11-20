@@ -135,6 +135,8 @@ func MapStderr(s string) error {
 		return agentcli.Permissionf("automation access denied: allow your terminal under Privacy & Security > Automation")
 	case strings.Contains(s, "-1712"):
 		return agentcli.Unavailablef("the app did not respond in time (AppleEvent timeout)")
+	case strings.Contains(s, "-1728"):
+		return agentcli.NotFoundf("the item no longer exists (it may have been deleted or moved)")
 	case strings.Contains(s, "-600"), strings.Contains(s, "-609"):
 		return agentcli.Unavailablef("the app is not running or quit unexpectedly")
 	case s == "":
