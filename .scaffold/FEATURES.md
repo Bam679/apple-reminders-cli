@@ -1,0 +1,6 @@
+- Lists, due dates, search, and single reminders with all their fields
+- Adding, updating, completing and deleting reminders, also in batches read from stdin
+- Output as text lines, JSON or NDJSON, with field selection, paging and a size limit
+- Writes stay off until a policy file allows them, and every write can be previewed with `--dry-run`
+- A Claude Code plugin with a skill for agents and a hook that protects the policy file
+- One static binary with no dependencies, released with signed checksums and build provenance

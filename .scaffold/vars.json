@@ -11,10 +11,15 @@
   "KEYWORDS": "\"apple-reminders\", \"reminders\", \"eventkit\", \"macos\", \"cli\", \"agent\"",
   "SCOPE_HELP": "reminder list titles (e.g. `Shopping`, `Agent*`)",
   "WRITE_OPS": "`add`, `update`, `complete`, `delete`, `list-create`, `list-delete`",
-  "SYSTEM_POLICY": "/Library/Application Support/agent-cli/apple-reminders.json",
   "INJECTION": "Static JXA script (`go:embed`). Input travels only as one JSON argv element to `/usr/bin/osascript` (absolute path), and fuzz tests check the script is never altered by input. An integration test round-trips hostile strings through real osascript.",
   "SECRETS": "No credentials involved; macOS TCC controls access.",
   "NETWORK": "",
-  "POLICY": "{\n  \"version\": 1,\n  \"operations\": { \"allow\": [\"read\", \"add\", \"update\", \"complete\"], \"deny\": [\"delete\", \"list-delete\"] },\n  \"scopes\": {\n    \"read\":  { \"allow\": [\"*\"], \"deny\": [\"Health*\"] },\n    \"write\": { \"allow\": [\"Agent*\", \"Shopping\"], \"deny\": [] }\n  },\n  \"limits\": { \"max_results\": 200, \"max_write_batch\": 10 }\n}",
-  "ICON_COLOR": "#2F9E44"
+  "POLICY": "{\n  \"version\": 1,\n  \"operations\": {\n    \"allow\": [\n      \"read\",\n      \"add\",\n      \"update\",\n      \"complete\"\n    ],\n    \"deny\": [\n      \"delete\",\n      \"list-delete\"\n    ]\n  },\n  \"scopes\": {\n    \"read\": {\n      \"allow\": [\n        \"*\"\n      ],\n      \"deny\": [\n        \"Health*\"\n      ]\n    },\n    \"write\": {\n      \"allow\": [\n        \"Agent*\",\n        \"Shopping\"\n      ],\n      \"deny\": []\n    }\n  },\n  \"limits\": {\n    \"max_write_batch\": 10\n  }\n}",
+  "ICON_COLOR": "#2F9E44",
+  "ONELINER": "Read and manage Apple Reminders from the command line, built for AI coding agents.",
+  "PRIVATE_EXAMPLE": "Health*",
+  "PERMISSION_HINT": "macOS has not granted Reminders access to the app that runs the CLI",
+  "DATA_NOUN": "your reminders and to-do lists",
+  "INTEGRATION_NOTE": "The Reminders tests create a list named `agent-cli-test-<random>` and delete it at the end.",
+  "ARCHIVE_NOTE": ""
 }

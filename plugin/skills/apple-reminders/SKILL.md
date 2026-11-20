@@ -44,7 +44,7 @@ printf '%s\n' '{"list":"Shopping","title":"Milk"}' | apple-reminders add - --con
 | 2 | usage | fix the flags (see `--help`) |
 | 3 | not found | re-list to get valid ids or list names |
 | 4 | policy denied | **stop**: tell the user which op/list was denied. Never edit `~/.config/agent-cli/*`, never look for workarounds. |
-| 5 | confirm required | you forgot `--confirm`. Only add it if the user wants the change. |
+| 5 | confirm required | nothing changed; the plan is on stdout. Show it to the user and rerun with `--confirm` only if they want the change |
 | 6 | permission | macOS privacy: the user must allow Reminders access for their terminal app |
 | 7 | unavailable | retry once later |
 | 8 | conflict | the list name is ambiguous, so pass the list id |

@@ -9,7 +9,7 @@
 | `update <id> [--title] [--notes] [--due\|--clear-due] [--priority]` | write `update` | change a reminder |
 | `complete <id>… [--undo]` | write `complete` | mark completed / not completed |
 | `delete <id>…` | write `delete` | delete reminders |
-| `list-create <title>` / `list-delete <list>` | write | create a list / delete an **empty** list |
+| `list-create <title>` / `list-delete <list>` | write | create a list / delete an empty list |
 | `schema`, `policy`, `guard`, `version` | builtin | contract, effective policy, hook guard, version |
 
 Dates accept `YYYY-MM-DD` (all-day), `YYYY-MM-DDTHH:MM`, RFC 3339, `today`, `tomorrow` and `+Nd`. Priority accepts `none|high|medium|low` or `0-9`.
