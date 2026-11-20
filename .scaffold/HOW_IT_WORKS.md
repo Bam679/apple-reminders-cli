@@ -1,0 +1,1 @@
+`apple-reminders` runs one fixed JXA script through `/usr/bin/osascript`. The script talks to EventKit and receives your input as a single JSON argument, so text from you or the agent never becomes code.

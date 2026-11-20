@@ -1,0 +1,1 @@
+Measured on 20 open reminders (2026-11-20, v0.1.0, macOS 26.6.2): the default text output was 1,385 bytes and `--json` 6,510 bytes, and the command took 0.56 s. Bytes are not tokens, and your lists will differ; `apple-reminders list --limit 20 | wc -c` shows your own number.

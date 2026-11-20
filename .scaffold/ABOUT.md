@@ -1,1 +1,0 @@
-`apple-reminders` lets an AI agent see what is due and keep your to-do lists up to date. It talks to Reminders through EventKit, prints one compact line per reminder, and stays read-only until you allow writes in a policy file. The checks run inside the binary, so they apply to every agent, whether that is Claude Code, Codex, Cursor or a script.

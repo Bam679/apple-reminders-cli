@@ -21,5 +21,11 @@
   "PERMISSION_HINT": "macOS has not granted Reminders access to the app that runs the CLI",
   "DATA_NOUN": "your reminders and to-do lists",
   "INTEGRATION_NOTE": "The Reminders tests create a list named `agent-cli-test-<random>` and delete it at the end.",
-  "ARCHIVE_NOTE": ""
+  "ARCHIVE_NOTE": "",
+  "TARGET": "Reminders",
+  "AGENT_TASK": "the user's reminders and to-do lists",
+  "SANDBOX_TARGET": "Reminders through `osascript`",
+  "FIRST_RUN": "On the first run macOS asks whether your terminal app may access Reminders.",
+  "ARCHIVE_CHOICES": "`darwin` with `arm64` or `amd64`",
+  "NETWORK_SECTION": "`apple-reminders` makes no network connections. Reminders stay in EventKit on your Mac, and iCloud syncs them as usual."
 }

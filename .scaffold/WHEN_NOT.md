@@ -1,0 +1,3 @@
+- You need tags, subtasks or location-based alerts. EventKit doesn't expose them, so the CLI can't either.
+- Your agent cannot run shell commands. An MCP server fits better there.
+- You want a person to approve every single change in a dialog. The CLI's `--confirm` is typed by the agent; use Claude Code's `ask` rules from `apple-reminders policy --claude-settings` for that.

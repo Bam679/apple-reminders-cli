@@ -1,0 +1,1 @@
+`apple-reminders` reads and writes reminders through EventKit, the macOS framework behind the Reminders app, and prints one line per reminder or JSON. Everything runs on your Mac, and the CLI itself makes no network connections. Writes stay off until a policy file allows them.
