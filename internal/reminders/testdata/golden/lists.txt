@@ -1,0 +1,4 @@
+L2	Agent Sandbox	iCloud
+L4	Dup	iCloud
+L5	Dup	Local
+L1	Shopping	iCloud

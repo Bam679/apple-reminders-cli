@@ -1,0 +1,19 @@
+{
+  "REPO": "apple-reminders-cli",
+  "BIN": "apple-reminders",
+  "TITLE": "Apple Reminders",
+  "DESC": "Apple Reminders CLI for AI agents: list, search and (policy-gated) create/complete reminders via EventKit.",
+  "PKG": "reminders",
+  "APPLE": true,
+  "GOOS": "darwin",
+  "PLATFORMS": "macOS 14+, Apple Silicon and Intel",
+  "EXAMPLE_OS": "darwin",
+  "KEYWORDS": "\"apple-reminders\", \"reminders\", \"eventkit\", \"macos\", \"cli\", \"agent\"",
+  "SCOPE_HELP": "reminder list titles (e.g. `Shopping`, `Agent*`)",
+  "WRITE_OPS": "`add`, `update`, `complete`, `delete`, `list-create`, `list-delete`",
+  "SYSTEM_POLICY": "/Library/Application Support/agent-cli/apple-reminders.json",
+  "INJECTION": "Static JXA script (`go:embed`). Input travels only as one JSON argv element to `/usr/bin/osascript` (absolute path), and fuzz tests check the script is never altered by input. An integration test round-trips hostile strings through real osascript.",
+  "SECRETS": "No credentials involved; macOS TCC controls access.",
+  "NETWORK": "",
+  "POLICY": "{\n  \"version\": 1,\n  \"operations\": { \"allow\": [\"read\", \"add\", \"update\", \"complete\"], \"deny\": [\"delete\", \"list-delete\"] },\n  \"scopes\": {\n    \"read\":  { \"allow\": [\"*\"], \"deny\": [\"Health*\"] },\n    \"write\": { \"allow\": [\"Agent*\", \"Shopping\"], \"deny\": [] }\n  },\n  \"limits\": { \"max_results\": 200, \"max_write_batch\": 10 }\n}"
+}

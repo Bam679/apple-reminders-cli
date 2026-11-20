@@ -1,0 +1,13 @@
+{
+  "name": "apple-reminders-cli",
+  "owner": { "name": "Bam679" },
+  "description": "Single-plugin marketplace for apple-reminders. All agent CLIs: Bam679/agent-cli-plugins.",
+  "plugins": [
+    {
+      "name": "apple-reminders",
+      "source": "./plugin",
+      "description": "Apple Reminders CLI for AI agents: list, search and (policy-gated) create/complete reminders via EventKit.",
+      "category": "productivity"
+    }
+  ]
+}

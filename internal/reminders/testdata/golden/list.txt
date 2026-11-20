@@ -1,0 +1,2 @@
+R2	2026-11-21T09:30:00Z	Call plumber	Agent Sandbox
+R1	2026-12-01	Buy milk	Shopping
