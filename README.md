@@ -10,7 +10,7 @@ Part of the agent-cli family: [apple-mail](https://github.com/Bam679/apple-mail-
 
 ## Install
 
-**Binary** (macOS 14+, Apple Silicon and Intel): download from [Releases](https://github.com/Bam679/apple-reminders-cli/releases), verify it, and put it on your `PATH`:
+**Binary** (macOS 14+, Apple Silicon and Intel): download from [Releases](https://github.com/Bam679/apple-reminders-cli/releases) (`.tar.gz`; Windows: `.zip`), verify it, and put it on your `PATH`:
 
 ```sh
 V=0.1.0; OS=darwin; ARCH=arm64
