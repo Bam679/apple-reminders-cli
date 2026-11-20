@@ -1,10 +1,20 @@
 {
   "name": "apple-reminders",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Apple Reminders CLI for AI agents: list, search and (policy-gated) create/complete reminders via EventKit.",
-  "author": { "name": "Bam679", "url": "https://github.com/Bam679" },
+  "author": {
+    "name": "Bam679",
+    "url": "https://github.com/Bam679"
+  },
   "homepage": "https://github.com/Bam679/apple-reminders-cli",
   "repository": "https://github.com/Bam679/apple-reminders-cli",
   "license": "MIT",
-  "keywords": ["apple-reminders", "reminders", "eventkit", "macos", "cli", "agent"]
+  "keywords": [
+    "apple-reminders",
+    "reminders",
+    "eventkit",
+    "macos",
+    "cli",
+    "agent"
+  ]
 }
