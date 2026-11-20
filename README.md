@@ -7,6 +7,11 @@ Read and manage Apple Reminders from the command line, built for AI coding agent
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Bam679/apple-reminders-cli/badge)](https://scorecard.dev/viewer/?uri=github.com/Bam679/apple-reminders-cli)
 [![licence](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+  <img alt="apple-reminders logo: the agent-cli bracket mark with the apple-reminders glyph" src="assets/logo.svg" height="56">
+</picture>
+
 `apple-reminders` reads and writes reminders through EventKit, the macOS framework behind the Reminders app, and prints one line per reminder or JSON. Everything runs on your Mac, and the CLI itself makes no network connections. Writes stay off until a policy file allows them.
 
 Measured on 20 open reminders (2026-11-20, v0.1.0, macOS 26.6.2): the default text output was 1,385 bytes and `--json` 6,510 bytes, and the command took 0.56 s. Bytes are not tokens, and your lists will differ; `apple-reminders list --limit 20 | wc -c` shows your own number.
