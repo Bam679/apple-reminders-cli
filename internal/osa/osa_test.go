@@ -34,7 +34,11 @@ func checkArgv(t *testing.T, s string) {
 	if err := json.Unmarshal([]byte(argv[4]), &req); err != nil || req.Op != "echo" {
 		t.Fatalf("payload does not decode: %v", err)
 	}
-	if want := strings.ToValidUTF8(s, "�"); req.Args["s"] != want {
+	// encoding/json replaces every invalid UTF-8 byte with U+FFFD.
+	var want string
+	b, _ := json.Marshal(s)
+	_ = json.Unmarshal(b, &want)
+	if req.Args["s"] != want {
 		t.Fatalf("roundtrip mismatch: %q != %q", req.Args["s"], want)
 	}
 }
