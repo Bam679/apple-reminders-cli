@@ -15,5 +15,6 @@
   "INJECTION": "Static JXA script (`go:embed`). Input travels only as one JSON argv element to `/usr/bin/osascript` (absolute path), and fuzz tests check the script is never altered by input. An integration test round-trips hostile strings through real osascript.",
   "SECRETS": "No credentials involved; macOS TCC controls access.",
   "NETWORK": "",
-  "POLICY": "{\n  \"version\": 1,\n  \"operations\": { \"allow\": [\"read\", \"add\", \"update\", \"complete\"], \"deny\": [\"delete\", \"list-delete\"] },\n  \"scopes\": {\n    \"read\":  { \"allow\": [\"*\"], \"deny\": [\"Health*\"] },\n    \"write\": { \"allow\": [\"Agent*\", \"Shopping\"], \"deny\": [] }\n  },\n  \"limits\": { \"max_results\": 200, \"max_write_batch\": 10 }\n}"
+  "POLICY": "{\n  \"version\": 1,\n  \"operations\": { \"allow\": [\"read\", \"add\", \"update\", \"complete\"], \"deny\": [\"delete\", \"list-delete\"] },\n  \"scopes\": {\n    \"read\":  { \"allow\": [\"*\"], \"deny\": [\"Health*\"] },\n    \"write\": { \"allow\": [\"Agent*\", \"Shopping\"], \"deny\": [] }\n  },\n  \"limits\": { \"max_results\": 200, \"max_write_batch\": 10 }\n}",
+  "ICON_COLOR": "#2F9E44"
 }
